@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+
+.ml-5{
+    margin-left: 5px;
+}
+
+.w-5{
+    width: 5%;
+}
+
+.container{
+    width: 50%;
+}
+
+.heading{
+    text-align: center;
+    color:rgb(0, 0, 53);
+    margin: 26px 5px;
+    font-size: 36px;
+    font-weight: 200px;
+}
+
+.contacts-list{
+    margin: 0px auto;
+    list-style: none;
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.list-item{
+    font-size: 22px;
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    transition: 0.2s ease-in-out;
+}
+
+.list-item:hover{
+    background-color: rgba(243, 243, 255, 0.749);
+}
+
+.list-item:nth-last-child(1){
+    border: 0px;
+}
+
+.name{
+    min-width: 45%;
+    max-width: 55%;
+    display: inline-block;
+    margin:0px 10px 0px 5px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.phone-num{
+    min-width: 30%;
+    display: inline-block;
+}
+
+.btn--hidden{
+    background: transparent;
+    border: 0px;
+    float: right;
+    position: relative;
+    top: 5px;
+    right: 10px;
+}
+
+.btn--hidden:hover{
+    cursor: pointer;
+}
+
+.add-contact{
+    margin: 10px auto;
+    font-size: 20px;
+}
+
+.sub-heading{
+    margin: 20px 0px 8px;
+    font-weight: 200;
+}
+
+.input{
+    padding: 5px;
+    font-size: 18px;
+    min-width: 40%;
+    transition: 0.2s ease-in-out;
+}
+
+.input:hover{
+    box-shadow: 1px 1px black;
+}
+
+.btn{
+    padding: 7px;
+    color: white;
+    background-color: rgb(0, 51, 65);
+    border: 0.8px solid black;
+    font-size: 16px;
+    border-radius: 2px;
+    min-width: 18%;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover{
+    background-color: rgba(217, 247, 255, 0.288);
+    color: rgb(0, 0, 84);
+    cursor: pointer;
+}
+
+@media all and (max-width:768px){
+
+    .list-item, .name{
+        font-size: 18px;
+    }
+    
+    .container{
+        min-width: 95%;
+    }
+
+    .input{
+        min-width: 80%;
+        margin-bottom: 5px;
+    }
+
+    .btn{
+        min-width: 40%;
+    }
+}
+
+@media all and (min-width:769px) and (max-width:1200px){
+    .container{
+        min-width: 75%;
+    }
+}

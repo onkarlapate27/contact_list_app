@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Contacts List
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/19ac6b02c5.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <h1 class="heading"><i class="fa-regular fa-address-book mr-10"></i>Contacts List</h1>
+
+    <ul class="contacts-list container">
+        <% for(let j of contact_list) {%>
+            <li class="list-item">
+                <i class="fa-solid fa-user w-5 ml-5"></i>
+                <div class="name">
+                    <%= j.name %>
+                </div>
+                <div class="phone-num">
+                    <%= j.phone %>
+                </div>
+                <button class="btn--hidden"><a style="text-decoration: none; color:black;" href="/delete-contact/<%= j._id %>"><i class="fa-solid fa-trash"></i></a></button>
+            </li>
+            <% } %>
+    </ul>
+
+    <div class="add-contact container">
+        <h3 class="sub-heading">
+            Add Contacts to List
+        </h3>
+        <form action="/create-contact" method="post">
+            <input type="text" name="name" placeholder="Enter Your Name" required class="input">
+            <input type="number" name="phone" placeholder="Enter Phone No. (10 digits)" required class="input">
+            <button class="btn" type="submit">Add Contact</button>
+        </form>
+    </div>
+</body>
+
+</html>
